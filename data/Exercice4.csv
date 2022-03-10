@@ -1,0 +1,15 @@
+﻿day;time;temp;humidity;discount;number
+1;sunny;28;high;1;25
+2;sunny;30;high;0;30
+3;cloudy;35;high;1;46
+4;rainy;16;high;1;45
+5;rainy;5;normal;1;52
+6;rainy;7;normal;0;23
+7;cloudy;6;normal;0;43
+8;sunny;12;high;1;35
+9;sunny;4;normal;1;38
+10;rainy;18;normal;1;46
+11;sunny;14;normal;0;48
+12;cloudy;15;high;0;52
+13;cloudy;31;normal;1;44
+14;rainy;12;high;0;30
