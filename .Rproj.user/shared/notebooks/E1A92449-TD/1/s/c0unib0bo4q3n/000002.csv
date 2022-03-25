@@ -1,3 +1,0 @@
-"0","# na.string est initialisé de la sorte afin que l'on puisse mieux gérer les données manquantes par la suite."
-"0","titanic <- read.csv(file.path(""data"", ""titanic"", ""train.csv""), na.strings = """")"
-"0","test <- read.csv(file.path(""data"", ""titanic"", ""test.csv""), na.strings = """")"

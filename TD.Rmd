@@ -368,6 +368,7 @@ perfs <- as.data.frame(t(do.call(rbind, Map(data.frame,
                        nbClassifier = nbClassifier_perfs))))
 
 # On trie par f1-score décroissant
+# Il faudra télécharger le notebook pour voir les scores correctement
 attach(perfs)
 perfs[order(-f1_score),]
 detach(perfs)

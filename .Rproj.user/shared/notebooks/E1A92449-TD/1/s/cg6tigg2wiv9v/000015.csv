@@ -1,6 +1,0 @@
-"0","library(ggplot2)"
-"0",""
-"0","ggplot(titanic, aes(x = Survived)) +"
-"0","  geom_bar(width=0.5, fill = ""coral"") +"
-"0","  geom_text(stat='count', aes(label=stat(count)), vjust=-0.5) +"
-"0","  theme_classic()"

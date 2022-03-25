@@ -1,8 +1,0 @@
-"0","library(rpart)"
-"0","library(rpart.plot)"
-"2","Warning:"
-"2"," package ‘rpart.plot’ was built under R version 4.1.3
-"
-"0","set.seed(2022)"
-"0","dtree <- rpart(Survived ~ ., data = train, method = 'class')"
-"0","rpart.plot(dtree, extra = 106)"

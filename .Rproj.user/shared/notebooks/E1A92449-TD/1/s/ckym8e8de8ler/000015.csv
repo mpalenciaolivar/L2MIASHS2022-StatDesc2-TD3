@@ -1,2 +1,0 @@
-"0","ggplot(titanic, aes(x = Age)) +"
-"0"," geom_density(fill='coral')"
