@@ -1,0 +1,7 @@
+"0","ggplot(titanic, aes(x = Survived, fill = Pclass)) +"
+"0"," geom_bar(position = position_dodge()) +"
+"0"," geom_text(stat='count',"
+"0","           aes(label=stat(count)), "
+"0","           position = position_dodge(width=1), "
+"0","           vjust=-0.5)+"
+"0"," theme_classic()"

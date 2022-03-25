@@ -1,0 +1,11 @@
+"0","library(ROSE)"
+"2","Warning:"
+"2"," package ‘ROSE’ was built under R version 4.1.3
+"
+"2","Loaded ROSE 0.0-4
+
+"
+"0","roc.curve(y_pred, y_true, plotit = TRUE, add.roc = FALSE, "
+"0","          n.thresholds=100)"
+"1","Area under the curve (AUC): 0.802
+"

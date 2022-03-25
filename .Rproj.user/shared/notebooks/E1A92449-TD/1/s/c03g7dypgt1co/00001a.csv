@@ -1,0 +1,20 @@
+"0","library(GGally)"
+"2","Warning:"
+"2"," package ‘GGally’ was built under R version 4.1.3
+"
+"2","Loading required package: ggplot2
+"
+"2","Registered S3 method overwritten by 'GGally':
+  method from   
+  +.gg   ggplot2
+"
+"0","ggcorr(titanic,"
+"0","       nbreaks = 6,"
+"0","       label = TRUE,"
+"0","       label_size = 3,"
+"0","       color = ""grey50"")"
+"2","Warning in ggcorr(titanic, nbreaks = 6, label = TRUE, label_size = 3, color = ""grey50"") :"
+"2","
+ "
+"2"," data in column(s) 'Survived', 'Pclass', 'Sex' are not numeric and were ignored
+"

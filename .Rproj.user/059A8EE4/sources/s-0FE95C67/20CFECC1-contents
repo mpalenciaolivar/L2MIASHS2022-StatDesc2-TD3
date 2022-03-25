@@ -2,7 +2,7 @@
 Le présent document a pour objectif de présenter synthétiquement - et au fur et à mesure des séances - la solution du TD 3 correspondant au cours de Statistique descriptive 2 dispensé en L2 MIASHS à l’Université Lumière Lyon 2 par Stéphane CHRÉTIEN.
 
 # Pour consulter seulement
-Il suffira de cliquer sur [`TD.md`](https://github.com/mpalenciaolivar/L2MIASHS2022-StatDesc2-TD2/blob/main/TD.md).
+Il suffira de cliquer sur [`TD.md`](https://github.com/mpalenciaolivar/L2MIASHS2022-StatDesc2-TD3/blob/main/TD.md).
 
 # Pour télécharger le projet
 Ceux qui connaissent déjà git peuvent procéder comme à l'accoutumée. Les méthodes ci-dessous concerneront davantage ceux qui ne savent pas ce qu'est git.

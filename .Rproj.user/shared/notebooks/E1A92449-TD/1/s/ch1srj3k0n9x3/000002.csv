@@ -1,0 +1,5 @@
+"0","titanic$Survived <- factor(titanic$Survived)"
+"0","titanic$Pclass <- factor(titanic$Pclass, order=TRUE, levels = c(3, 2, 1))"
+"0",""
+"0","test$Survived <- factor(test$Survived)"
+"0","test$Pclass <- factor(test$Pclass, order=TRUE, levels = c(3, 2, 1))"

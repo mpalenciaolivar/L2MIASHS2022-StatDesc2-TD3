@@ -1,0 +1,4 @@
+"0","roc.curve(y_pred, y_true, plotit = TRUE, add.roc = FALSE, "
+"0","          n.thresholds=100)"
+"1","Area under the curve (AUC): 0.790
+"
