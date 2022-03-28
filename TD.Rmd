@@ -18,12 +18,12 @@ descriptive 2 dispensé en L2 MIASHS à l'Université Lumière Lyon 2 par [Stép
 # Ressources utiles
 ## Ouvrages
 - [Cours de Ricco RAKOTOMALALA sur la régression logistique (davantage de Statistique)](http://eric.univ-lyon2.fr/~ricco/cours/cours_regression_logistique.html)
-
+- [Cours de Julien AH-PINE (davantage général)](https://eric.univ-lyon2.fr/~jahpine/cours/m2_sise-dm/cm.pdf)
 
 ## Ressources internet
 - [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
 
-- [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/))
+- [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
 
 # Exercice
 Ce TD est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur la pratique de la classification. Cet exercice est inédit, en ce sens qu'il n'est pas compris dans le sujet de TD. À ce titre, on mettra l'accent sur les ressources suivantes et sur le langage R :
