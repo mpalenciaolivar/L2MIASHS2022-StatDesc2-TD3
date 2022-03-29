@@ -21,18 +21,23 @@ descriptive 2 dispensé en L2 MIASHS à l'Université Lumière Lyon 2 par [Stép
 - [Cours de Julien AH-PINE (davantage général)](https://eric.univ-lyon2.fr/~jahpine/cours/m2_sise-dm/cm.pdf)
 
 ## Ressources internet
-- [Statistique descriptive élémentaire](https://www.math.univ-toulouse.fr/~baccini/zpedago/asde.pdf)
+- De manière générale, tout ce qui est dans la galaxie [WikiStat](http://wikistat.fr/), mais en particulier :
 
-- [Pratique de la modélisation statistique](https://www.math.univ-toulouse.fr/~besse/pub/modlin.pdf)
+  - [Statistique descriptive élémentaire](https://www.math.univ-toulouse.fr/~baccini/zpedago/asde.pdf)
+  
+  - [Pratique de la modélisation statistique](https://www.math.univ-toulouse.fr/~besse/pub/modlin.pdf)
+  
+  - [Exploration statistique multidimensionnelle](https://www.math.univ-toulouse.fr/~besse/pub/Explo_stat.pdf)
 
-- [Exploration statistique multidimensionnelle](https://www.math.univ-toulouse.fr/~besse/pub/Explo_stat.pdf)
+- Autrement :
 
-- [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
-
-- [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
+  - [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
+  
+  - [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
 
 # Exercice
 Ce TD est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur la pratique de la classification. Cet exercice est inédit, en ce sens qu'il n'est pas compris dans le sujet de TD. À ce titre, on mettra l'accent sur les ressources suivantes et sur le langage R :
+
 - [Introduction au Data Mining](https://eric.univ-lyon2.fr/~ricco/cours/slides/Introduction_au_Data_Mining.pdf)
 
 - [Introduction à la data science – Du data mining au big data analytics](https://eric.univ-lyon2.fr/~ricco/cours/slides/intro_ds_from_dm_to_bd.pdf)
