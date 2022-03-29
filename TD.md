@@ -21,6 +21,12 @@ descriptive 2 dispensé en L2 MIASHS à l'Université Lumière Lyon 2 par [Stép
 - [Cours de Julien AH-PINE (davantage général)](https://eric.univ-lyon2.fr/~jahpine/cours/m2_sise-dm/cm.pdf)
 
 ## Ressources internet
+- [Statistique descriptive élémentaire](https://www.math.univ-toulouse.fr/~baccini/zpedago/asde.pdf)
+
+- [Pratique de la modélisation statistique](https://www.math.univ-toulouse.fr/~besse/pub/modlin.pdf)
+
+- [Exploration statistique multidimensionnelle](https://www.math.univ-toulouse.fr/~besse/pub/Explo_stat.pdf)
+
 - [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
 
 - [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
