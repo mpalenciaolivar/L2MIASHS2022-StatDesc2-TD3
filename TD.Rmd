@@ -40,7 +40,7 @@ descriptive 2 dispensé en L2 MIASHS à l'Université Lumière Lyon 2 par [Stép
 # Exercice
 Ce TD est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur la pratique de la classification. Cet exercice est inédit, en ce sens qu'il n'est pas compris dans le sujet de TD. À ce titre, on mettra l'accent sur les ressources suivantes et sur le langage R :
 
-- [Introduction à la data science – Du data mining au big data analytics](https://eric.univ-lyon2.fr/~ricco/cours/slides/intro_ds_from_dm_to_bd.pdf). On pourra trouver une version plus complète [ici](https://eric.univ-lyon2.fr/~ricco/cours/slides/Introduction_au_Data_Mining.pdf)
+- [Introduction à la data science – Du data mining au big data analytics](https://eric.univ-lyon2.fr/~ricco/cours/slides/intro_ds_from_dm_to_bd.pdf). On pourra trouver une version complémentaire [ici](https://eric.univ-lyon2.fr/~ricco/cours/slides/Introduction_au_Data_Mining.pdf)
 
 - [Apprentissage supervisé](https://eric.univ-lyon2.fr/~ricco/cours/slides/Apprentissage_Supervise.pdf)
 
@@ -49,7 +49,7 @@ Ce TD est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur 
 - [Classifieur bayésien naïf](http://eric.univ-lyon2.fr/~ricco/cours/slides/naive_bayes_classifier.pdf)
 
 
-**Il ne sert à rien de courir : il faut d'abord lire les ressources (tutoriel exclus) PUIS faire le TD, et pas l'inverse.**
+**Il ne sert à rien de courir : il faut d'abord lire les ressources PUIS faire le TD, et pas l'inverse.**
 
 ## Contexte
 On cherche à prédire quels sont les individus qui survivront au nauffrage du [Titanic](https://fr.wikipedia.org/wiki/Titanic) à partir d'un certain nombre de variables.
