@@ -85,7 +85,11 @@ library(Amelia)  # Chargement de lib
 ```
 
 ```
-## Le chargement a nécessité le package : Rcpp
+## Warning: package 'Amelia' was built under R version 4.1.3
+```
+
+```
+## Loading required package: Rcpp
 ```
 
 ```
@@ -103,7 +107,10 @@ missmap(titanic, col = c("black", "grey"))
 
 ![](TD_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
-Nous avons une variable Cabin qui a beaucoup de données manquantes, et une variable PassengerId qui est une pseudo-variable d'identifiants. Nous les excluerons de l'analyse. Nous suivrons notre tutoriel de référence dans un souci de simplicité (pour la pédagogie, donc). Mais la décision de faire d'abandonner d'autres variables que celles mentionnées précédemment qui a été prise par l'auteur du tuto me semble peu justifiée à certains égards.
+Nous avons une variable Cabin qui a beaucoup de données manquantes, et une variable PassengerId qui est une pseudo-variable d'identifiants. Nous les excluerons de l'analyse. Nous suivrons notre tutoriel de référence dans un souci de simplicité (pour la pédagogie, donc). Mais la décision de faire d'abandonner d'autres variables que celles mentionnées précédemment qui a été prise par l'auteur du tuto me semble peu justifiée à certains égards. Par exemple, on enlève le prix payé et le port d'embarquement, sans justification autre
+que l'intuition, sans vérification. Mais, en l'état, qui nous dit que parmi les survivants, il n'y a pas davantage de gens qui ont payé cher, et que ces gens ayant payé cher ont embarqué à un endroit plutôt qu'à un autre ? C'est une explication un peu recherchée et sans forcément de fondement, mais l'idée est là : le choix est méthodologiquement discutable pour faire de la sélection de variables (en l'absence d'analyse).
+
+Puisque nous parlons de ce type de sélection, parlons également des outliers et des données aberrantes. De mon point de vue, une donnée aberrante est une valeur dont il est manifeste qu'il s'agit d'une erreur : une taille négative, par exemple. Si l'on peut appliquer un correctif, il faut le faire. Un outlier est pour sa part une valeur qui sort du lot. On peut souvent voir que les outliers sont retirés des données, sans plus de considération. C'est une erreur de jugement : tout d'abord, pourquoi le point que l'on cherche à retirer serait-il à retirer ? N'appartient-il pas à une sous-distribution (modèle de mélange par ex), n'est-il pas symptomatique d'autre chose ? Un exemple concret : prenons une chaîne de cafés, dont certains (mettons 1 ou 2) sont en centre-ville, la plupart dans le reste de la ville voire en périphérie. On étudie le chiffre d'affaires. Il semble assez logique que ceux en centre-ville fassent bien davantage de chiffre que ceux en périphérie... cela veut surtout dire qu'il s'agit de prendre en compte le lieu d'implantation, en l'espèce. Je préfère tenir compte des cas de ce type dans ma modélisation plutôt que de supprimer l'info, même lorsque je n'ai pas forcément la localisation parmi mes variables, mais juste un élément de connaissance métier (cela se fait en Statistique bayésienne). Et même si l'on choisissait de retirer une observation, il y a des techniques savantes (Statistique par ex) pour faire de la détection d'outlier. Il en va de même sur l'imputation de données manquantes, qui n'est parfois pas même désirable en fonction du contexte d'étude.
 
 
 ```r
@@ -112,17 +119,17 @@ library(dplyr)
 
 ```
 ## 
-## Attachement du package : 'dplyr'
+## Attaching package: 'dplyr'
 ```
 
 ```
-## Les objets suivants sont masqués depuis 'package:stats':
+## The following objects are masked from 'package:stats':
 ## 
 ##     filter, lag
 ```
 
 ```
-## Les objets suivants sont masqués depuis 'package:base':
+## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union
 ```
@@ -180,7 +187,11 @@ library(GGally)
 ```
 
 ```
-## Le chargement a nécessité le package : ggplot2
+## Warning: package 'GGally' was built under R version 4.1.3
+```
+
+```
+## Loading required package: ggplot2
 ```
 
 ```
@@ -302,7 +313,13 @@ validation <- train_validation_split(titanic, 0.8, train = FALSE)
 ```r
 library(rpart)
 library(rpart.plot)
+```
 
+```
+## Warning: package 'rpart.plot' was built under R version 4.1.3
+```
+
+```r
 set.seed(2022)
 dtree <- rpart(Survived ~ ., data = train, method = 'class')
 rpart.plot(dtree, extra = 106)
@@ -318,12 +335,16 @@ library(MLmetrics)
 ```
 
 ```
-## 
-## Attachement du package : 'MLmetrics'
+## Warning: package 'MLmetrics' was built under R version 4.1.3
 ```
 
 ```
-## L'objet suivant est masqué depuis 'package:base':
+## 
+## Attaching package: 'MLmetrics'
+```
+
+```
+## The following object is masked from 'package:base':
 ## 
 ##     Recall
 ```
@@ -372,6 +393,10 @@ paste0("AUC: ", dtree_auc)
 
 ```r
 library(ROSE)
+```
+
+```
+## Warning: package 'ROSE' was built under R version 4.1.3
 ```
 
 ```
