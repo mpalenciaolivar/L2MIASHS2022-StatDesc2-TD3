@@ -286,8 +286,7 @@ titanic$Discretized.age <- NULL
 ## Constitution des jeux pour l'apprentissage
 
 ```r
-# Attention: il n'y a pas de randomisation ici puisque le jeu de données est
-# déjà randomisé.
+# Attention: il n'y a pas de randomisation ici puisque le jeu de données est déjà randomisé. CETTE RANDOMISATION EST NÉCESSAIRE !
 # S'il y en avait, il aurait fallu exécuter la fonction avec une seed, tel que :
 
 # set.seed(2022)
@@ -533,13 +532,13 @@ Cette sortie est la même que pour une régression linéaire. Encore une fois, c
 
 
 ```r
-LR <- 677.21 - 461.88
-p <- 498 - 492
+LR <- logreg$null.deviance - logreg$deviance
+p <- logreg$df.null - logreg$df.residual
 pchisq(LR, p, lower.tail = F)
 ```
 
 ```
-## [1] 1.03008e-43
+## [1] 1.031983e-43
 ```
 
 En supposant un risque à 5%, on est bien en-deçà. On a donc bien un modèle informatif.

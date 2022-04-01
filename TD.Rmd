@@ -183,8 +183,7 @@ titanic$Discretized.age <- NULL
 
 ## Constitution des jeux pour l'apprentissage
 ```{r}
-# Attention: il n'y a pas de randomisation ici puisque le jeu de données est
-# déjà randomisé.
+# Attention: il n'y a pas de randomisation ici puisque le jeu de données est déjà randomisé. CETTE RANDOMISATION EST NÉCESSAIRE !
 # S'il y en avait, il aurait fallu exécuter la fonction avec une seed, tel que :
 
 # set.seed(2022)
@@ -293,8 +292,8 @@ summary(logreg)
 Cette sortie est la même que pour une régression linéaire. Encore une fois, c'est parce que la *régression logistique est une régression et non un classifieur en soi*. Voyons comment cela se passe sur la significativité globale :
 
 ```{r}
-LR <- 677.21 - 461.88
-p <- 498 - 492
+LR <- logreg$null.deviance - logreg$deviance
+p <- logreg$df.null - logreg$df.residual
 pchisq(LR, p, lower.tail = F)
 ```
 
