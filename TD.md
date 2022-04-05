@@ -9,9 +9,7 @@ output:
 ---
 # Préambule
 
-Le présent document a pour objectif de présenter synthétiquement - et au fur et
-à mesure des séances - la solution du TD 3 correspondant au cours de Statistique
-descriptive 2 dispensé en L2 MIASHS à l'Université Lumière Lyon 2 par [Stéphane CHRÉTIEN](https://sites.google.com/site/stephanegchretien/enseignement/l2-miashs-statistiques-descriptives/l2-statistiques-descriptives-2-regression-et-classification). Les consignes et le corrigé sont trouvables dans le répertoire `doc` ; `data` contient pour sa part les jeux de données utilisés dans le cadre du TD dans des formats simples d'usage.
+Le présent document a pour objectif de présenter de façon rudimentaire comment faire de la classification, en complément du TD 3 correspondant au cours de Statistique descriptive 2 dispensé en L2 MIASHS à l'Université Lumière Lyon 2 par [Stéphane CHRÉTIEN](https://sites.google.com/site/stephanegchretien/enseignement/l2-miashs-statistiques-descriptives/l2-statistiques-descriptives-2-regression-et-classification). Les consignes et le corrigé sont trouvables dans le répertoire `doc` ; `data` contient pour sa part les jeux de données utilisés dans le cadre du TD dans des formats simples d'usage.
 
 *Ce document n'est pas un tutoriel pour R, et n'a pas pour but de remplacer le CM. En revanche, c'est la suite directe du TD 2, [trouvable ici](https://github.com/mpalenciaolivar/L2MIASHS2022-StatDesc2-TD2)*.
 
@@ -38,9 +36,9 @@ descriptive 2 dispensé en L2 MIASHS à l'Université Lumière Lyon 2 par [Stép
   - [Tutoriel Titanic (repris partiellement)](https://medium.com/analytics-vidhya/a-beginners-guide-to-learning-r-with-the-titanic-dataset-a630bc5495a8)
   
 # Exercice
-Ce TD est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur la pratique de la classification. Cet exercice est inédit, en ce sens qu'il n'est pas compris dans le sujet de TD. À ce titre, on mettra l'accent sur les ressources suivantes et sur le langage R :
+Ce notebook est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur la pratique de la classification. Cet exercice est inédit, en ce sens qu'il n'est pas compris dans le sujet de TD. À ce titre, on mettra l'accent sur les ressources suivantes et sur le langage R :
 
-- [Introduction à la data science – Du data mining au big data analytics](https://eric.univ-lyon2.fr/~ricco/cours/slides/intro_ds_from_dm_to_bd.pdf). On pourra trouver une version complémentaire [ici](https://eric.univ-lyon2.fr/~ricco/cours/slides/Introduction_au_Data_Mining.pdf)
+- [Introduction à la data science – Du data mining au big data analytics](https://eric.univ-lyon2.fr/~ricco/cours/slides/intro_ds_from_dm_to_bd.pdf). On pourra trouver une version complémentaire [ici](https://eric.univ-lyon2.fr/~ricco/cours/slides/Introduction_au_Data_Mining.pdf) et les notes utilisées pendant la présentation [ici](https://github.com/mpalenciaolivar/L2MIASHS2022-StatDesc2-TD3/blob/main/doc/NotesTD3.pdf)
 
 - [Apprentissage supervisé](https://eric.univ-lyon2.fr/~ricco/cours/slides/Apprentissage_Supervise.pdf)
 
@@ -85,11 +83,7 @@ library(Amelia)  # Chargement de lib
 ```
 
 ```
-## Warning: package 'Amelia' was built under R version 4.1.3
-```
-
-```
-## Loading required package: Rcpp
+## Le chargement a nécessité le package : Rcpp
 ```
 
 ```
@@ -119,17 +113,17 @@ library(dplyr)
 
 ```
 ## 
-## Attaching package: 'dplyr'
+## Attachement du package : 'dplyr'
 ```
 
 ```
-## The following objects are masked from 'package:stats':
+## Les objets suivants sont masqués depuis 'package:stats':
 ## 
 ##     filter, lag
 ```
 
 ```
-## The following objects are masked from 'package:base':
+## Les objets suivants sont masqués depuis 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union
 ```
@@ -187,11 +181,7 @@ library(GGally)
 ```
 
 ```
-## Warning: package 'GGally' was built under R version 4.1.3
-```
-
-```
-## Loading required package: ggplot2
+## Le chargement a nécessité le package : ggplot2
 ```
 
 ```
@@ -312,13 +302,7 @@ validation <- train_validation_split(titanic, 0.8, train = FALSE)
 ```r
 library(rpart)
 library(rpart.plot)
-```
 
-```
-## Warning: package 'rpart.plot' was built under R version 4.1.3
-```
-
-```r
 set.seed(2022)
 dtree <- rpart(Survived ~ ., data = train, method = 'class')
 rpart.plot(dtree, extra = 106)
@@ -334,16 +318,12 @@ library(MLmetrics)
 ```
 
 ```
-## Warning: package 'MLmetrics' was built under R version 4.1.3
-```
-
-```
 ## 
-## Attaching package: 'MLmetrics'
+## Attachement du package : 'MLmetrics'
 ```
 
 ```
-## The following object is masked from 'package:base':
+## L'objet suivant est masqué depuis 'package:base':
 ## 
 ##     Recall
 ```
@@ -392,10 +372,6 @@ paste0("AUC: ", dtree_auc)
 
 ```r
 library(ROSE)
-```
-
-```
-## Warning: package 'ROSE' was built under R version 4.1.3
 ```
 
 ```
