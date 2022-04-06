@@ -9,6 +9,8 @@ pkgLoad <- function( packages = "favourites" ) {
     packages <- c(
       "Amelia",
       "aod",
+      "disk.frame",
+      "data.table",
       "dplyr",
       "e1071",
       "GGally",

@@ -19,6 +19,7 @@ Le présent document a pour objectif de présenter de façon rudimentaire commen
 - [Cours de Julien AH-PINE (davantage général)](https://eric.univ-lyon2.fr/~jahpine/cours/m2_sise-dm/cm.pdf)
 
 ## Ressources internet
+- [Filtrer des données avec dplyr](https://cmdlinetips.com/2020/08/dplyr-filter-filter-select-rows-based-on-conditions/)
 - De manière générale, tout ce qui est dans la galaxie [WikiStat](http://wikistat.fr/), mais en particulier :
 
   - [Statistique descriptive élémentaire](https://www.math.univ-toulouse.fr/~baccini/zpedago/asde.pdf)
@@ -35,7 +36,7 @@ Le présent document a pour objectif de présenter de façon rudimentaire commen
   
   - [Tutoriel Titanic (repris partiellement)](https://medium.com/analytics-vidhya/a-beginners-guide-to-learning-r-with-the-titanic-dataset-a630bc5495a8)
   
-# Exercice
+# Exercice 1
 Ce notebook est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur la pratique de la classification. Cet exercice est inédit, en ce sens qu'il n'est pas compris dans le sujet de TD. À ce titre, on mettra l'accent sur les ressources suivantes et sur le langage R :
 
 - [Introduction à la data science – Du data mining au big data analytics](https://eric.univ-lyon2.fr/~ricco/cours/slides/intro_ds_from_dm_to_bd.pdf). On pourra trouver une version complémentaire [ici](https://eric.univ-lyon2.fr/~ricco/cours/slides/Introduction_au_Data_Mining.pdf) et les notes utilisées pendant la présentation [ici](https://github.com/mpalenciaolivar/L2MIASHS2022-StatDesc2-TD3/blob/main/doc/NotesTD3.pdf)
@@ -61,6 +62,11 @@ Avant même de considérer le code, il va falloir faire un petit travail de qual
 Le projet va nécessiter un certain nombre de packages externes. Pour les installer, on ouvrira `requirements.R` et on cliquera sur `Run All` (CTRL+ALT+R).
 
 ## Chargement des données
+
+Ici, on a déjà un split train/test de fait. Il ne manquera que le jeu de données de validation,
+que l'on créera à partir de train. Ce sera à vous de tout faire pendant le projet, en n'omettant
+pas de randomiser votre échantillonnage.
+
 ```{r}
 # na.string est initialisé de la sorte afin que l'on puisse mieux gérer les données manquantes par la suite.
 titanic <- read.csv(file.path("data", "titanic", "train.csv"), na.strings = "")
@@ -295,7 +301,20 @@ p <- logreg$df.null - logreg$df.residual
 pchisq(LR, p, lower.tail = F)
 ```
 
-En supposant un risque à 5%, on est bien en-deçà. On a donc bien un modèle informatif.
+En supposant un risque à 5%, on est bien en-deçà. On a donc bien un modèle informatif. Le souci, c'est que cette façon d'évaluer le modèle va favoriser un modèle avec le plus de prédicteurs qu'un autre. Or, nous voulons un modèle proposant un ajustement raisonnable qui, pour autant, ne soit pas composé de l'intégralité des données. On peut utiliser l'AIC pour sélectionner des modèles tout en contrant cet effet. On se réfèrera au TD 2 pour voir comment utiliser l'AIC.
+
+```{r}
+aic_logreg <- AIC(logreg)
+aic_logreg
+```
+
+Cela marche aussi pour le BIC.
+
+```{r}
+bic_logreg <- BIC(logreg)
+bic_logreg
+```
+
 
 ```{r}
 y_true <- validation$Survived
@@ -413,3 +432,56 @@ paste0("Recall: ", dtree_tuned_fit_recall)
 paste0("F1 Score: ", dtree_tuned_fit_f1)
 paste0("AUC: ", dtree_tuned_fit_auc)
 ```
+
+# Exercice 2
+Cet exercice - facultatif et pas forcément indispensable au projet, c'est selon votre cas - est purement informatique. En effet : nous travaillons avec un ordinateur, qui est doté de ressources limitées. Mais, que faire lorsque nous ne pouvons pas charger un fichier entier en mémoire vive (RAM) ? Eh bien, il est possible de travailler quand même, malgré le fait que le fichier ne tienne pas sur la RAM si l'on cherche à le charger d'un coup. On échange de la mémoire contre du temps de traitement. On va ici montrer une façon de faire en R. Ce n'est pas la seule façon de faire, ni forcément la meilleure, mais elle a le mérite d'être clé en main. Parfait pour des étudiants de L2 MIASHS !
+
+Pour faire cet exercice, il faudra télécharger le jeu de données du [projet](https://github.com/mpalenciaolivar/L2MIASHS2022-StatDesc2-Projet/blob/main/docs/L2MIASHS2022_Projet_Statistique_Descriptive_2.pdf), en décompresser l'archive et placer le csv dans le répertoire data. Il n'est pas fourni directement du fait de limitations imposées par GitHub sur la taille des fichiers.
+
+On commence par charger les packages suivants :
+
+
+```{r}
+library(disk.frame)
+library(parallel)
+```
+Un peu de configuration :
+
+```{r}
+nCores <- detectCores()    # Dépend de la machine
+setup_disk.frame(workers = nCores)
+options(future.globals.maxSize = Inf)
+```
+
+On va maintenant morceler notre package en lots (les chunks) dont la taille est recommandée par des fonctions.
+
+```{r}
+df <- csv_to_disk.frame(
+  file.path("data", "train.csv"), 
+  outdir = file.path("data", "train.df"),
+  inmapfn = base::I,
+  recommend_nchunks(sum(file.size(file.path("data", "train.csv")))),
+  backend = "data.table")
+```
+
+On peut désormais accéder au csv via le dataframe df, même si l'ensemble des données n'est pas totalement en mémoire. R le charge par parties, mais on peut quand même manipuler le dataframe entier, mais par lots, ou chunks. Ainsi, si l'on veut renvoyer le premier chunk :
+
+```{r}
+df[1,]
+```
+
+Si l'on veut un échantillon aléatoire :
+
+```{r}
+train <- collect(sample_frac(df, 0.60))
+```
+
+À noter que la proportion correspond généralement à celle prise pour un jeu de données d'entraînement. En fait, on retrouve souvent :
+
+- 60% pour l'entraînement ;
+
+- 20% pour la validation ;
+
+- 20% pour le test.
+
+Sachant qu'en principe, et hors bootstrapping, on ne devrait pas retrouver les mêmes individus entre les jeux de données. À vous de reproduire la procédure d'échantillonnage, de telle sorte à ce que l'on ait des individus différents entre les 3 groupes (filtrez sur les id ! Aidez-vous de [ceci](https://cmdlinetips.com/2020/08/dplyr-filter-filter-select-rows-based-on-conditions/)). Un dernier point : pour l'instant, train est chargé en mémoire. Il peut être judicieux de l'écrire et de l'effacer pour gérer le reste du jeu de données, autrement, cela reviendrait à charger tout le jeu de données d'un coup et donc, procéder comme on l'a fait devient inutile. *A priori*, vous n'avez *aucune* raison d'avoir les 3 parties du jeu de données en mémoire en même temps. De même, souvenez-vous que l'on étudie *un échantillon* plutôt qu'une population, ce n'est donc pas grave que l'on n'ait pas d'indicateurs ou de graphiques sur tout le jeu de données, même si - encore une fois - plus il y en a, plus on s'approche de la valeur réelle, en principe.
