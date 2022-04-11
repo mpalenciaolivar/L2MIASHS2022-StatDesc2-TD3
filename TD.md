@@ -29,12 +29,17 @@ Le présent document a pour objectif de présenter de façon rudimentaire commen
   - [Exploration statistique multidimensionnelle](https://www.math.univ-toulouse.fr/~besse/pub/Explo_stat.pdf)
 
 - Autrement :
-
+  - [Decision Trees - The unreasonable power of nested decision rules](https://mlu-explain.github.io/decision-tree/)
+  
   - [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
   
   - [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
   
   - [Tutoriel Titanic (repris partiellement)](https://medium.com/analytics-vidhya/a-beginners-guide-to-learning-r-with-the-titanic-dataset-a630bc5495a8)
+  
+  - [Precision & Recall - Accuracy Is Not Enough](https://mlu-explain.github.io/precisin-recall/)
+  
+  - [The Bias-Variance Tradeoff](https://mlu-explain.github.io/bias-variance/)
   
 # Exercice 1
 Ce notebook est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur la pratique de la classification. Cet exercice est inédit, en ce sens qu'il n'est pas compris dans le sujet de TD. À ce titre, on mettra l'accent sur les ressources suivantes et sur le langage R :
