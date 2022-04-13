@@ -33,6 +33,18 @@ Le présent document a pour objectif de présenter de façon rudimentaire commen
   
   - [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
   
+  - [Regression Analysis: A Primer](https://www.kdnuggets.com/2017/02/regression-analysis-primer.html)
+  
+  - [Linear to Logistic Regression, Explained Step by Step](https://www.kdnuggets.com/2020/03/linear-logistic-regression-explained.html)
+  
+  - [Linear vs Logistic Regression: A Succinct Explanation](https://www.kdnuggets.com/2022/03/linear-logistic-regression-succinct-explanation.html)
+  
+  - [Logistic Regression for Classification](https://www.kdnuggets.com/2022/04/logistic-regression-classification.html)
+  
+  - [What is Softmax Regression and How is it Related to Logistic Regression?](https://www.kdnuggets.com/2016/07/softmax-regression-related-logistic-regression.html)
+  
+  - [Naïve Bayes Algorithm: Everything You Need to Know](https://www.kdnuggets.com/2020/06/naive-bayes-algorithm-everything.html)
+  
   - [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
   
   - [Tutoriel Titanic (repris partiellement)](https://medium.com/analytics-vidhya/a-beginners-guide-to-learning-r-with-the-titanic-dataset-a630bc5495a8)
