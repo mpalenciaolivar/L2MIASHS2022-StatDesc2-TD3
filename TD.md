@@ -32,6 +32,8 @@ Le présent document a pour objectif de présenter de façon rudimentaire commen
   - [Decision Trees - The unreasonable power of nested decision rules](https://mlu-explain.github.io/decision-tree/)
   
   - [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
+
+  - [Introduction aux arbres de décision (de type CART)](https://cel.archives-ouvertes.fr/cel-02281064/document)
   
   - [Regression Analysis: A Primer](https://www.kdnuggets.com/2017/02/regression-analysis-primer.html)
   
