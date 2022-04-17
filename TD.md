@@ -29,32 +29,52 @@ Le présent document a pour objectif de présenter de façon rudimentaire commen
   - [Exploration statistique multidimensionnelle](https://www.math.univ-toulouse.fr/~besse/pub/Explo_stat.pdf)
 
 - Autrement :
-  - [Decision Trees - The unreasonable power of nested decision rules](https://mlu-explain.github.io/decision-tree/)
-  
-  - [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
 
-  - [Introduction aux arbres de décision (de type CART)](https://cel.archives-ouvertes.fr/cel-02281064/document)
+  - Classification :
+    
+    - [ROC Analysis with Practical Example of Machine Learning Algorithm](https://towardsdatascience.com/roc-analysis-with-practical-example-f899cd10dd47)
+    
+    - [Construire une courbe ROC](https://freakonometrics.hypotheses.org/1345)
+    
+    - [Precision & Recall - Accuracy Is Not Enough](https://mlu-explain.github.io/precisin-recall/)
   
-  - [Regression Analysis: A Primer](https://www.kdnuggets.com/2017/02/regression-analysis-primer.html)
+    - [The Bias-Variance Tradeoff](https://mlu-explain.github.io/bias-variance/)
+
   
-  - [Linear to Logistic Regression, Explained Step by Step](https://www.kdnuggets.com/2020/03/linear-logistic-regression-explained.html)
+  - Classifieur bayésien naïf :
+    
+    - [Naïve Bayes Algorithm: Everything You Need to Know](https://www.kdnuggets.com/2020/06/naive-bayes-algorithm-everything.html)
+
+  - Arbres de décision :
   
-  - [Linear vs Logistic Regression: A Succinct Explanation](https://www.kdnuggets.com/2022/03/linear-logistic-regression-succinct-explanation.html)
+    - [Decision Trees - The unreasonable power of nested decision rules](https://mlu-explain.github.io/decision-tree/)
   
-  - [Logistic Regression for Classification](https://www.kdnuggets.com/2022/04/logistic-regression-classification.html)
+    - [Decision Tree Algorithm, Explained](https://www.kdnuggets.com/2020/01/decision-tree-algorithm-explained.html)
+
+    - [Introduction aux arbres de décision (de type CART)](https://cel.archives-ouvertes.fr/cel-02281064/document)
   
-  - [What is Softmax Regression and How is it Related to Logistic Regression?](https://www.kdnuggets.com/2016/07/softmax-regression-related-logistic-regression.html)
+  - Régression logistique :
   
-  - [Naïve Bayes Algorithm: Everything You Need to Know](https://www.kdnuggets.com/2020/06/naive-bayes-algorithm-everything.html)
+    - [Regression Analysis: A Primer](https://www.kdnuggets.com/2017/02/regression-analysis-primer.html)
+    
+    - [Linear to Logistic Regression, Explained Step by Step](https://www.kdnuggets.com/2020/03/linear-logistic-regression-explained.html)
+    
+    - [Linear vs Logistic Regression: A Succinct Explanation](https://www.kdnuggets.com/2022/03/linear-logistic-regression-succinct-explanation.html)
+    
+    - [Logistic Regression for Classification](https://www.kdnuggets.com/2022/04/logistic-regression-classification.html)
+    
+    - [Logistic Regression: Interaction Terms](https://www.cantab.net/users/filimon/cursoFCDEF/will/logistic_interact.pdf)
   
-  - [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
+    - [What is Softmax Regression and How is it Related to Logistic Regression?](https://www.kdnuggets.com/2016/07/softmax-regression-related-logistic-regression.html)
   
+    - [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
+
+ 
+ Sources :
+ 
   - [Tutoriel Titanic (repris partiellement)](https://medium.com/analytics-vidhya/a-beginners-guide-to-learning-r-with-the-titanic-dataset-a630bc5495a8)
-  
-  - [Precision & Recall - Accuracy Is Not Enough](https://mlu-explain.github.io/precisin-recall/)
-  
-  - [The Bias-Variance Tradeoff](https://mlu-explain.github.io/bias-variance/)
-  
+
+ 
 # Exercice 1
 Ce notebook est un peu différent ; il s'agit de vous mettre un pied à l'étrier sur la pratique de la classification. Cet exercice est inédit, en ce sens qu'il n'est pas compris dans le sujet de TD. À ce titre, on mettra l'accent sur les ressources suivantes et sur le langage R :
 
@@ -67,7 +87,7 @@ Ce notebook est un peu différent ; il s'agit de vous mettre un pied à l'étrie
 - [Classifieur bayésien naïf](http://eric.univ-lyon2.fr/~ricco/cours/slides/naive_bayes_classifier.pdf)
 
 
-**Il ne sert à rien de courir : il faut d'abord lire les ressources PUIS faire le TD, et pas l'inverse.**
+**Il ne sert à rien de courir : il faut d'abord lire les ressources PUIS faire le TD, et pas l'inverse. Si ce n'est pas clair, n'hésitez pas à vous référer aux ressources internet**
 
 ## Contexte
 On cherche à prédire quels sont les individus qui survivront au nauffrage du [Titanic](https://fr.wikipedia.org/wiki/Titanic) à partir d'un certain nombre de variables.
