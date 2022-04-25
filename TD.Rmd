@@ -68,6 +68,10 @@ Le présent document a pour objectif de présenter de façon rudimentaire commen
     - [What is Softmax Regression and How is it Related to Logistic Regression?](https://www.kdnuggets.com/2016/07/softmax-regression-related-logistic-regression.html)
   
     - [LOGIT REGRESSION | R DATA ANALYSIS EXAMPLES](https://stats.oarc.ucla.edu/r/dae/logit-regression/)
+    
+  - Guide pratique du pipeline en Data Science :
+    
+    - [A Beginner’s Guide to the Data Science Pipeline](https://www.kdnuggets.com/2018/05/beginners-guide-data-science-pipeline.html)
 
  
  Sources :
