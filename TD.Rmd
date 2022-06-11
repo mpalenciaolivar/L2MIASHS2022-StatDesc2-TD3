@@ -16,17 +16,22 @@ Le présent document a pour objectif de présenter de façon rudimentaire commen
 # Ressources utiles
 ## Ouvrages
 - [Cours de Ricco RAKOTOMALALA sur la régression logistique (davantage de Statistique)](http://eric.univ-lyon2.fr/~ricco/cours/cours_regression_logistique.html)
+
 - [Cours de Julien AH-PINE (davantage général)](https://eric.univ-lyon2.fr/~jahpine/cours/m2_sise-dm/cm.pdf)
 
 ## Ressources internet
+
+- [Cheatsheets de Shervine AMIDI (Stanford)](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning)
+
 - [Filtrer des données avec dplyr](https://cmdlinetips.com/2020/08/dplyr-filter-filter-select-rows-based-on-conditions/)
+
 - De manière générale, tout ce qui est dans la galaxie [WikiStat](http://wikistat.fr/), mais en particulier :
 
-  - [Statistique descriptive élémentaire](https://www.math.univ-toulouse.fr/~baccini/zpedago/asde.pdf)
+- [Statistique descriptive élémentaire](https://www.math.univ-toulouse.fr/~baccini/zpedago/asde.pdf)
   
-  - [Pratique de la modélisation statistique](https://www.math.univ-toulouse.fr/~besse/pub/modlin.pdf)
+- [Pratique de la modélisation statistique](https://www.math.univ-toulouse.fr/~besse/pub/modlin.pdf)
   
-  - [Exploration statistique multidimensionnelle](https://www.math.univ-toulouse.fr/~besse/pub/Explo_stat.pdf)
+- [Exploration statistique multidimensionnelle](https://www.math.univ-toulouse.fr/~besse/pub/Explo_stat.pdf)
 
 - Autrement :
 
@@ -97,6 +102,7 @@ Ce notebook est un peu différent ; il s'agit de vous mettre un pied à l'étrie
 On cherche à prédire quels sont les individus qui survivront au nauffrage du [Titanic](https://fr.wikipedia.org/wiki/Titanic) à partir d'un certain nombre de variables.
 
 ## Dictionnaire de données
+
 ![](img/datadict.png)
 
 Avant même de considérer le code, il va falloir faire un petit travail de qualification des données. Ce n'est pas parce qu'une variable prend des valeurs "chiffre" que c'est une variable quantitative continue (ex : un rang).
